@@ -56,13 +56,20 @@ def timer(string, func, array):
 if __name__ == "__main__":
     arr = [int(random() * 100 + 1) for _ in range(10000)]
     arr2 = [int(random() * 100 + 1) for _ in range(1000)]
+    arr3= [int(random() * 100 + 1) for _ in range(100000)]
 
-    timer("Merge sort of 1000 elements", merge_sort, arr)
-    timer("Insertion sort of 1000 elements", insertion_sort, arr)
-    timer("Timsort sort of 1000 elements", sorted, arr)
+    timer("Merge sort of 10000 elements", merge_sort, arr)
+    timer("Insertion sort of 10000 elements", insertion_sort, arr)
+    timer("Timsort sort of 10000 elements", sorted, arr)
 
     print("_________________________")
 
-    timer("Merge sort of 100 elements", merge_sort, arr2)
-    timer("Insertion sort of 100 elements", insertion_sort, arr2)
-    timer("Timsort sort of 100 elements", sorted, arr2)
+    timer("Merge sort of 1000 elements", merge_sort, arr2)
+    timer("Insertion sort of 1000 elements", insertion_sort, arr2)
+    timer("Timsort sort of 1000 elements", sorted, arr2)
+
+    print("_________________________")
+
+    timer("Merge sort of 100000 elements", merge_sort, arr3)
+    timer("Insertion sort of 100000 elements", insertion_sort, arr3)
+    timer("Timsort sort of 100000 elements", sorted, arr3)
